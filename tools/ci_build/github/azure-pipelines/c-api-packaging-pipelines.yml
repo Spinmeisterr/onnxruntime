@@ -94,7 +94,7 @@ jobs:
     runTests: true
     buildJava: true
 
-- job: Jar_Packaging
+- job: Jar_Packaging_GPU
   workspace:
     clean: all
   pool: 'Win-CPU-2021'
