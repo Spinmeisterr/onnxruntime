@@ -1,5 +1,5 @@
 parameters:
-  AgentPool: 'Linux-CPU-2021'
+  AgentPool: 'Linux-CPU'
   TestGPU: 'false'
 
 jobs:

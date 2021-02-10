@@ -48,7 +48,7 @@ jobs:
   workspace:
     clean: all
   timeoutInMinutes:  60
-  pool: 'Linux-CPU-2021'
+  pool: 'Linux-CPU'
   steps:
     - template: set-version-number-variables-step.yml
     - template: get-docker-image-steps.yml
