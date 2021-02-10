@@ -163,7 +163,7 @@ jobs:
   dependsOn:
     Jar_Packaging_GPU
   steps:
-  - template: set-version-number-variables-step.yml
+  - template: templates/set-version-number-variables-step.yml
 
   - task: DownloadPipelineArtifact@2
     displayName: 'Download Final Jar'
@@ -184,7 +184,7 @@ jobs:
         java -jar junit-platform-console-standalone-1.6.2.jar -cp .;.\test;protobuf-java-3.9.2.jar;onnxruntime-$(OnnxRuntimeVersion).jar --scan-class-path --fail-if-no-tests --disable-banner
       workingDirectory: '$(Build.BinariesDirectory)\final-jar'
 
-  - template: component-governance-component-detection-steps.yml
+  - template: templates/component-governance-component-detection-steps.yml
     parameters :
       condition : 'succeeded'
   - task: mspremier.PostBuildCleanup.PostBuildCleanup-task.PostBuildCleanup@3
