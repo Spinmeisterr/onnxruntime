@@ -152,7 +152,7 @@ jobs:
     condition: always()
     
 
-- job: Final_Jar_Testing_Windows
+- job: Final_Jar_Testing_Windows_GPU
   workspace:
     clean: all
   pool: 'Win-GPU-2019'
@@ -191,7 +191,7 @@ jobs:
     displayName: 'Clean Agent Directories'
     condition: always()
 
-- job: Final_Jar_Testing_Linux
+- job: Final_Jar_Testing_Linux_GPU
   workspace:
     clean: all
   pool: 'Linux-GPU-CUDA10'
